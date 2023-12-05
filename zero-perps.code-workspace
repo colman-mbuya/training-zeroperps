@@ -2,6 +2,9 @@
 	"folders": [
 		{
 			"path": "."
+		},
+		{
+			"path": "../training-fund-me-foundry"
 		}
 	]
 }
