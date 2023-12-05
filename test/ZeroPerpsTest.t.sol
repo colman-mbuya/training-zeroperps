@@ -1,21 +1,21 @@
 // SPDX-License-Identifier: SEE LICENSE IN LICENSE
 pragma solidity ^0.8.20;
 
-import {ZeroToken} from "../../src/ZeroToken.sol";
-import {DeployZeroToken} from "../../script/DeployZeroToken.s.sol";
+import {ZeroPerps} from "../src/ZeroPerps.sol";
+import {DeployZeroPerps} from "../script/DeployZeroPerps.s.sol";
 import {Test, console} from "forge-std/Test.sol";
 import {StdCheats} from "forge-std/StdCheats.sol";
 
 contract ZeroTokenTest is StdCheats, Test {
-    ZeroToken zeroToken;
+    ZeroPerps zeroPerps;
 
     function setUp() external {
-        DeployZeroToken deployer = new DeployZeroToken();
-        zeroToken = deployer.run();
+        DeployZeroPerps deployer = new DeployZeroPerps();
+        zeroPerps = deployer.run();
     }
 
-    function testTotalSupplyIsNotNegative() public {
-        uint256 totalSupply = zeroToken.totalSupply();
+    function testTotalInitialSupplyIsZero() public {
+        uint256 totalSupply = zeroPerps.totalSupply();
         uint256 expectedSupply = 0;
         assertEq(totalSupply, expectedSupply);
     }
