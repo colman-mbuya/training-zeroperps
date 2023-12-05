@@ -16,3 +16,5 @@ A simple perpertual market implementation built to hopefully gain a deeper under
     - [] What actors are involved? Is there a keeper? What is the admin tasked with?
     - [] What are the known risks/issues?
     - [] Any pertinent formulas used.
+- [] Security
+    - [] Review the [ERC4626 security blog by OZ](https://docs.openzeppelin.com/contracts/4.x/erc4626)
