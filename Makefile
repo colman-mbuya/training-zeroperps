@@ -52,6 +52,10 @@ local-withdraw:
 sepolia-deploy:
 	forge script $(DEPLOY_SCRIPT) --rpc-url $(SEPOLIA_RPC_URL) --private-key $(SEPOLIA_PRIVATE_KEY) --broadcast --verify
 
+.PHONY: sepolia-pyth-btc-price
+sepolia-pyth-btc-price:
+	forge script script/TestInteractions.s.sol:PythBtcPrice --rpc-url $(SEPOLIA_RPC_URL) --private-key $(SEPOLIA_PRIVATE_KEY) --broadcast -vv
+
 ### Tests
 
 .PHONY: run-unit-tests
