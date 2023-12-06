@@ -2,6 +2,11 @@
 
 A simple perpertual market implementation built to hopefully gain a deeper understanding of DeFi perpetual markets.
 
+## Storage Design
+
+- Liquidity provided
+    - Mappoin
+
 ## Progress & Roadmap
 - [] Smart Contract(s) with the following functionalities, with corresponding tests:
     - [] Liquidity Providers can deposit and withdraw liquidity.

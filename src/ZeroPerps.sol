@@ -6,6 +6,11 @@ import {ERC4626} from "@openzeppelin/contracts/token/ERC20/extensions/ERC4626.so
 
 
 contract ZeroPerps is ERC4626 {
+    //================================================================
+    // Storage Design
+    //================================================================
+    //
+
     constructor(ERC20 _asset) ERC4626(_asset) ERC20("Zero", "ZERO") { }
 
 }

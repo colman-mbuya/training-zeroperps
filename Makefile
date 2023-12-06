@@ -6,7 +6,7 @@ DEPLOY_SCRIPT=script/DeployZeroToken.s.sol
 ### Environment Setup
 .PHONY: install-dependencies
 install-dependencies:
-	forge install OpenZeppelin/openzeppelin-contracts && forge install cyfrin/foundry-devops@0.0.11 --no-commit
+	forge install pyth-network/pyth-sdk-solidity@v2.2.0 --no-commit && OpenZeppelin/openzeppelin-contracts && forge install cyfrin/foundry-devops@0.0.11 --no-commit
 
 ### Build Commands
 
